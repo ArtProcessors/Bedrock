@@ -10,10 +10,19 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_OPTIONS(NSInteger, NSTimeIntervalUnit) {
+	NSTimeIntervalUnitHour = (1 << 1),
+	NSTimeIntervalUnitMinute = (1 << 2),
+	NSTimeIntervalUnitSecond = (1 << 3),
+	NSTimeIntervalUnitMillisecond = (1 << 4),
+};
+
+extern NSTimeInterval NSTimeIntervalWithMilliseconds(double milliseconds);
 extern NSTimeInterval NSTimeIntervalWithMinutes(double minutes);
 extern NSTimeInterval NSTimeIntervalWithHours(double hours);
 extern NSTimeInterval NSTimeIntervalWithDays(double days);
 
+extern NSString * NSStringFromNSTimeInterval(NSTimeInterval timeInterval, NSTimeIntervalUnit units);
 
 @interface NSDate (Bedrock)
 
