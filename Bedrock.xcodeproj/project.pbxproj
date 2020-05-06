@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0104A03321C7771300139402 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0104A03221C7771300139402 /* Expecta.framework */; };
 		0104A05E21C9C29500139402 /* Bedrock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0104A05521C9C29400139402 /* Bedrock.framework */; };
 		0104A06E21C9C5B100139402 /* BedrockMacrosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C5A6C1C72000800916261 /* BedrockMacrosTests.m */; };
 		0104A06F21C9C5B100139402 /* NSArray+BedrockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C5A6E1C72001300916261 /* NSArray+BedrockTests.m */; };
@@ -42,7 +41,6 @@
 		0104A08C21C9C5E200139402 /* NSObject+Bedrock.h in Headers */ = {isa = PBXBuildFile; fileRef = 01276DA41CF2C8020051D1FE /* NSObject+Bedrock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0104A08D21C9C5E200139402 /* NSSet+Bedrock.h in Headers */ = {isa = PBXBuildFile; fileRef = 01276DBC1CF32A3F0051D1FE /* NSSet+Bedrock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0104A08E21C9C5E200139402 /* NSString+Bedrock.h in Headers */ = {isa = PBXBuildFile; fileRef = 01276DA81CF2CA110051D1FE /* NSString+Bedrock.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0104A09021C9C6A900139402 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0104A08F21C9C6A900139402 /* Expecta.framework */; };
 		010880B01CF488C800AB38FF /* NSData+BedrockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 010880AF1CF488C800AB38FF /* NSData+BedrockTests.m */; };
 		012393741D05A013009D5DD9 /* NSSet+BedrockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 012393731D05A013009D5DD9 /* NSSet+BedrockTests.m */; };
 		012393761D05A4C5009D5DD9 /* NSString+BedrockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 012393751D05A4C5009D5DD9 /* NSString+BedrockTests.m */; };
@@ -77,6 +75,8 @@
 		018DEC2C1D056189000DD339 /* NSError+BedrockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 018DEC2B1D056189000DD339 /* NSError+BedrockTests.m */; };
 		018DEC2E1D05628F000DD339 /* NSFileManager+BedrockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 018DEC2D1D05628F000DD339 /* NSFileManager+BedrockTests.m */; };
 		018DEC301D0562A9000DD339 /* NSObject+BedrockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 018DEC2F1D0562A9000DD339 /* NSObject+BedrockTests.m */; };
+		06DD1E18246279C9004D019F /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DD1E17246279C9004D019F /* Expecta.framework */; };
+		06DD1E1A246279DA004D019F /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DD1E19246279DA004D019F /* Expecta.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,13 +97,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0104A03221C7771300139402 /* Expecta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Expecta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0104A05521C9C29400139402 /* Bedrock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bedrock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0104A05821C9C29400139402 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		0104A05D21C9C29500139402 /* Bedrock-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bedrock-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0104A06C21C9C3E200139402 /* Bedrock-iOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Bedrock-iOS.xcconfig"; sourceTree = "<group>"; };
 		0104A06D21C9C3E900139402 /* Bedrock-macOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Bedrock-macOS.xcconfig"; sourceTree = "<group>"; };
-		0104A08F21C9C6A900139402 /* Expecta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Expecta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		010880AF1CF488C800AB38FF /* NSData+BedrockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+BedrockTests.m"; sourceTree = "<group>"; };
 		010EC0E01D7D330300C223F2 /* Bedrock.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Bedrock.xcconfig; sourceTree = "<group>"; };
 		012393731D05A013009D5DD9 /* NSSet+BedrockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+BedrockTests.m"; sourceTree = "<group>"; };
@@ -137,15 +135,14 @@
 		015C5A6C1C72000800916261 /* BedrockMacrosTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BedrockMacrosTests.m; sourceTree = "<group>"; };
 		015C5A6E1C72001300916261 /* NSArray+BedrockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+BedrockTests.m"; sourceTree = "<group>"; };
 		016A87B61D82B69A00D9C2CE /* BedrockTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BedrockTests.xcconfig; sourceTree = "<group>"; };
-		016B0E3321C774730034D4B9 /* Expecta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Expecta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		016B0E3521C774890034D4B9 /* Expecta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Expecta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		016B0E3721C774CA0034D4B9 /* Expecta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Expecta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		018DEC251D054C5D000DD339 /* NSAttributedString+BedrockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+BedrockTests.m"; sourceTree = "<group>"; };
 		018DEC271D05534D000DD339 /* NSDate+BedrockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+BedrockTests.m"; sourceTree = "<group>"; };
 		018DEC291D055A17000DD339 /* NSDictionary+BedrockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+BedrockTests.m"; sourceTree = "<group>"; };
 		018DEC2B1D056189000DD339 /* NSError+BedrockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+BedrockTests.m"; sourceTree = "<group>"; };
 		018DEC2D1D05628F000DD339 /* NSFileManager+BedrockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+BedrockTests.m"; sourceTree = "<group>"; };
 		018DEC2F1D0562A9000DD339 /* NSObject+BedrockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BedrockTests.m"; sourceTree = "<group>"; };
+		06DD1E17246279C9004D019F /* Expecta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Expecta.framework; path = Carthage/Build/Mac/Expecta.framework; sourceTree = "<group>"; };
+		06DD1E19246279DA004D019F /* Expecta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Expecta.framework; path = Carthage/Build/iOS/Expecta.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,8 +157,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0104A09021C9C6A900139402 /* Expecta.framework in Frameworks */,
 				0104A05E21C9C29500139402 /* Bedrock.framework in Frameworks */,
+				06DD1E1A246279DA004D019F /* Expecta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,8 +173,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0104A03321C7771300139402 /* Expecta.framework in Frameworks */,
 				015C5A511C701EC400916261 /* Bedrock.framework in Frameworks */,
+				06DD1E18246279C9004D019F /* Expecta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,11 +301,8 @@
 		016B0E3121C773600034D4B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0104A08F21C9C6A900139402 /* Expecta.framework */,
-				0104A03221C7771300139402 /* Expecta.framework */,
-				016B0E3721C774CA0034D4B9 /* Expecta.framework */,
-				016B0E3521C774890034D4B9 /* Expecta.framework */,
-				016B0E3321C774730034D4B9 /* Expecta.framework */,
+				06DD1E19246279DA004D019F /* Expecta.framework */,
+				06DD1E17246279C9004D019F /* Expecta.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -640,6 +634,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -667,6 +665,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -822,6 +824,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 016A87B61D82B69A00D9C2CE /* BedrockTests.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nickforge.Bedrock-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -831,6 +837,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 016A87B61D82B69A00D9C2CE /* BedrockTests.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nickforge.Bedrock-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
