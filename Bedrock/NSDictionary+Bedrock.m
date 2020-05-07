@@ -7,6 +7,8 @@
 //
 
 #import "NSDictionary+Bedrock.h"
+#import "NSArray+Bedrock.h"
+#import "BedrockMacros.h"
 
 @implementation NSDictionary (Bedrock)
 
@@ -50,6 +52,112 @@
 		[result setObject:obj forKey:key];
 	}];
 	return result.copy;
+}
+
+- (id)br_deepCopy
+{
+	return [self br_dictionaryByMappingObjects:^id(id key, id object) {
+		if ([object respondsToSelector:@selector(br_deepCopy)]) {
+			return [object br_deepCopy];
+		}
+		if ([object respondsToSelector:@selector(copy)]) {
+			return [object copy];
+		}
+		return object;
+	}].copy;
+}
+
+- (nullable id)br_nestedObjectForKeyPath:(NSString *)keyPath
+{
+	NSArray<NSString *> *components = [keyPath componentsSeparatedByString:@"."];
+	if (components.count == 0) return nil;
+	if (components.count == 1) {
+		id firstObject = components.firstObject;
+		return [self objectForKey:firstObject];
+	}
+	id firstObject = components.firstObject;
+	id object = [self objectForKey:firstObject];
+	NSDictionary *objectAsDictionary = AsClass(object, NSDictionary);
+	if (objectAsDictionary != nil) {
+		NSString *tailKeyPath = [[components br_subarrayFromIndex:1] componentsJoinedByString:@"."];
+		return [objectAsDictionary br_nestedObjectForKeyPath:tailKeyPath];
+	} else {
+		return nil;
+	}
+}
+
+- (nullable id)br_objectForKey:(NSString *)key ifItIsKindOfClass:(Class)class defaultValue:(nullable id)defaultValue
+{
+	id obj = self[key];
+	if (!obj) {
+		return defaultValue;
+	}
+	else if ([obj isKindOfClass:class]) {
+		return obj;
+	}
+	else {
+		return defaultValue;
+	}
+}
+
+- (nullable NSString *)br_stringForKey:(NSString *)key
+{
+	return [self br_objectForKey:key ifItIsKindOfClass:[NSString class] defaultValue:nil];
+}
+
+- (nullable NSString *)br_stringForKey:(NSString *)key defaultValue:(NSString *)value
+{
+	return [self br_objectForKey:key ifItIsKindOfClass:[NSString class] defaultValue:value];
+}
+
+- (NSInteger)br_integerForKey:(NSString *)key
+{
+	return [[self br_objectForKey:key ifItIsKindOfClass:[NSNumber class] defaultValue:nil] integerValue];
+}
+
+- (NSInteger)br_integerForKey:(NSString *)key defaultValue:(NSInteger)value
+{
+	return [[self br_objectForKey:key ifItIsKindOfClass:[NSNumber class] defaultValue:@(value)] integerValue];
+}
+
+- (BOOL)br_boolForKey:(NSString *)key
+{
+	return [[self br_objectForKey:key ifItIsKindOfClass:[NSNumber class] defaultValue:nil] boolValue];
+}
+
+- (BOOL)br_boolForKey:(NSString *)key defaultValue:(BOOL)defaultValue
+{
+	return [[self br_objectForKey:key ifItIsKindOfClass:[NSNumber class] defaultValue:@(defaultValue)] boolValue];
+}
+
+- (double)br_doubleForKey:(NSString *)key
+{
+	return [[self br_objectForKey:key ifItIsKindOfClass:[NSNumber class] defaultValue:nil] doubleValue];
+}
+
+- (double)br_doubleForKey:(NSString *)key defaultValue:(BOOL)defaultValue
+{
+	return [[self br_objectForKey:key ifItIsKindOfClass:[NSNumber class] defaultValue:@(defaultValue)] doubleValue];
+}
+
+- (nullable NSArray *)br_arrayForKey:(NSString *)key
+{
+	return [self br_objectForKey:key ifItIsKindOfClass:[NSArray class] defaultValue:nil];
+}
+
+- (nullable NSArray *)br_arrayForKey:(NSString *)key defaultValue:(NSArray *)defaultValue
+{
+	return [self br_objectForKey:key ifItIsKindOfClass:[NSArray class] defaultValue:defaultValue];
+}
+
+- (nullable NSDictionary *)br_dictionaryForKey:(NSString *)key
+{
+	return [self br_objectForKey:key ifItIsKindOfClass:[NSDictionary class] defaultValue:nil];
+}
+
+- (nullable NSDictionary *)br_dictionaryForKey:(NSString *)key defaultValue:(NSDictionary *)defaultValue
+{
+	return [self br_objectForKey:key ifItIsKindOfClass:[NSDictionary class] defaultValue:defaultValue];
 }
 
 - (NSString *)br_singleLineDescription

@@ -8,6 +8,11 @@
 
 #import "NSDate+Bedrock.h"
 
+NSTimeInterval NSTimeIntervalWithMilliseconds(double milliseconds)
+{
+	return milliseconds / 1000.0;
+}
+
 NSTimeInterval NSTimeIntervalWithMinutes(double minutes)
 {
 	return minutes * 60.0;

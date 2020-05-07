@@ -10,10 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+extern NSTimeInterval NSTimeIntervalWithMilliseconds(double milliseconds);
 extern NSTimeInterval NSTimeIntervalWithMinutes(double minutes);
 extern NSTimeInterval NSTimeIntervalWithHours(double hours);
 extern NSTimeInterval NSTimeIntervalWithDays(double days);
-
 
 @interface NSDate (Bedrock)
 
