@@ -16,15 +16,15 @@ FOUNDATION_EXPORT const unsigned char BedrockVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <Bedrock/PublicHeader.h>
 
-#import "BedrockMacros.h"
+#import <Bedrock/BedrockMacros.h>
 
-#import "NSArray+Bedrock.h"
-#import "NSAttributedString+Bedrock.h"
-#import "NSDate+Bedrock.h"
-#import "NSDictionary+Bedrock.h"
-#import "NSError+Bedrock.h"
-#import "NSFileManager+Bedrock.h"
-#import "NSObject+Bedrock.h"
-#import "NSString+Bedrock.h"
-#import "NSSet+Bedrock.h"
-#import "NSData+Bedrock.h"
+#import <Bedrock/NSArray+Bedrock.h>
+#import <Bedrock/NSAttributedString+Bedrock.h>
+#import <Bedrock/NSDate+Bedrock.h>
+#import <Bedrock/NSDictionary+Bedrock.h>
+#import <Bedrock/NSError+Bedrock.h>
+#import <Bedrock/NSFileManager+Bedrock.h>
+#import <Bedrock/NSObject+Bedrock.h>
+#import <Bedrock/NSString+Bedrock.h>
+#import <Bedrock/NSSet+Bedrock.h>
+#import <Bedrock/NSData+Bedrock.h>
