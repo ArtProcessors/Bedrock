@@ -30,6 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 // Crypto
 //
 
+// Important: this function is cryptographically broken and must not be used in security contexts.
 - (NSData *)br_MD5Digest;
 
 - (NSData *)br_SHA1Digest;

@@ -41,12 +41,15 @@
 	return data.copy;
 }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 - (NSData *)br_MD5Digest
 {
 	uint8_t output[CC_MD5_DIGEST_LENGTH];
 	CC_MD5(self.bytes, (CC_LONG) self.length, output);
 	return [NSData dataWithBytes:output length:sizeof(output)];
 }
+#pragma clang diagnostic pop
 
 - (NSData *)br_SHA1Digest
 {
