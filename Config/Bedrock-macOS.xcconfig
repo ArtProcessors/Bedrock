@@ -10,5 +10,6 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 
 BR_PLATFORM = macOS
+MACOSX_DEPLOYMENT_TARGET = 12.0
 
 #include "Bedrock.xcconfig"

@@ -10,5 +10,6 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 
 BR_PLATFORM = iOS
+IPHONEOS_DEPLOYMENT_TARGET = 15.0
 
 #include "Bedrock.xcconfig"
