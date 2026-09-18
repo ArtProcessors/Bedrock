@@ -591,7 +591,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0104A06C21C9C3E200139402 /* Bedrock-iOS.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -606,7 +605,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0104A06C21C9C3E200139402 /* Bedrock-iOS.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_FAST_MATH = YES;
